@@ -1,0 +1,20 @@
+{
+  "title": "우리의 교실",
+  "subtitle": "같은 공간, 함께 만드는 시간.",
+  "welcome": "빈자리에 앉아도, 친구 옆에 서 있어도 좋아요.",
+  "sampleShortQuiz": {
+    "type": "short",
+    "question": "한글을 만든 조선의 왕은?",
+    "answers": ["세종대왕", "세종"],
+    "seconds": 20,
+    "attempts": 3,
+    "explanation": "1443년 훈민정음 창제"
+  },
+  "sampleQuiz": {
+    "question": "삼각형의 세 내각의 합은 얼마일까요?",
+    "options": ["90도", "180도", "270도", "360도"],
+    "correct": 1,
+    "seconds": 30,
+    "explanation": "평면 위 삼각형의 세 내각의 합은 180도입니다."
+  }
+}

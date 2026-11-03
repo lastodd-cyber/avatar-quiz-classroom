@@ -1,0 +1,92 @@
+/* 협동 게임방(블록 놀이터). 색: 딥 틸 #0f4c4f, 살몬 #fbe6df·#f4a99a, 크림 #fffaf2, 노랑 #f2c14e */
+#coop-room { position:fixed; inset:0; z-index:1900; display:flex; flex-direction:column; background:#fcebe4; color:#2a1410;
+  font-family:Pretendard, system-ui, sans-serif; user-select:none; -webkit-user-select:none; touch-action:none;
+  -webkit-touch-callout:none; -webkit-tap-highlight-color:transparent;
+  padding-bottom:env(safe-area-inset-bottom); }
+#coop-room [hidden] { display:none !important; }
+.coop-hud { flex:none; display:flex; align-items:center; gap:12px; padding:8px 14px; padding-top:max(8px, env(safe-area-inset-top));
+  background:#0f4c4f; color:#fbe6df; }
+.coop-title { font-size:16px; letter-spacing:-.2px; }
+.coop-goal { font-size:13px; font-weight:700; background:#fbe6df; color:#0f4c4f; padding:3px 8px; border-radius:4px; }
+.coop-timer { margin-left:auto; font-size:22px; font-weight:800; font-variant-numeric:tabular-nums; }
+.coop-timer.low { color:#f2c14e; animation:coop-blink 1s steps(2) infinite; }
+.coop-canvas { flex:1; min-height:0; width:100%; display:block; touch-action:none; cursor:pointer; }
+.coop-hint { position:absolute; left:50%; top:calc(52px + env(safe-area-inset-top)); transform:translateX(-50%); margin:0;
+  max-width:calc(100% - 24px); width:max-content; padding:6px 12px; background:#fffaf2; border:2px solid #0f4c4f;
+  border-radius:6px; font-size:13px; font-weight:700; color:#0f4c4f; text-align:center; pointer-events:none; }
+.coop-hint:empty { display:none; }
+.coop-banner { position:absolute; left:50%; top:34%; transform:translate(-50%,-50%); margin:0; padding:10px 18px;
+  background:#f2c14e; color:#2a1410; border:3px solid #2a1410; border-radius:8px; font-size:clamp(18px, 4.6vmin, 30px);
+  font-weight:800; white-space:nowrap; max-width:calc(100% - 24px); overflow:hidden; text-overflow:ellipsis; pointer-events:none;
+  box-shadow:0 5px 0 rgba(42,20,16,.25); }
+.coop-banner.show { animation:coop-pop .32s cubic-bezier(.2,1.6,.4,1) both, coop-fade .4s 1.9s both; }
+
+.coop-bar { flex:none; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px 12px;
+  padding:8px 12px; background:#fffaf2; border-top:2px solid #0f4c4f; }
+.coop-controls, .coop-watch { margin:0; font-size:13px; color:#0f4c4f; text-align:center; }
+.coop-controls b { background:#0f4c4f; color:#fbe6df; padding:2px 6px; border-radius:4px; font-size:12px; }
+.coop-controls i { display:inline-block; width:4px; height:4px; margin:0 6px 2px; border-radius:50%; background:#0f4c4f; vertical-align:middle; }
+.coop-watch { width:100%; font-weight:700; }
+.coop-cheers { display:flex; gap:8px; }
+.coop-cheers button { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; min-width:72px; min-height:52px;
+  padding:6px 10px; background:#fbe6df; color:#2a1410; border:2px solid #2a1410; border-radius:6px; font-size:12px; font-weight:700; cursor:pointer; }
+.coop-cheers button b { font-size:16px; color:#0f4c4f; line-height:24px; }
+.coop-cheers svg { width:24px; height:24px; }
+.coop-cheers button:active, .coop-cheers button.pop { animation:coop-press .25s ease-out; }
+.coop-host { display:flex; gap:8px; }
+.coop-btn { min-height:44px; padding:8px 14px; border-radius:5px; background:#0f4c4f; color:#fbe6df; border:2px solid #0f4c4f;
+  font-weight:800; font-size:14px; cursor:pointer; }
+.coop-btn.ghost { background:#fffaf2; color:#0f4c4f; }
+
+/* 시작 안내와 결과는 캔버스 위에 띄운다 */
+.coop-intro, .coop-result { position:absolute; left:50%; top:52%; transform:translate(-50%,-50%); width:min(560px, calc(100% - 24px));
+  max-height:calc(100% - 150px); overflow:auto; padding:16px 18px 18px; background:#fffaf2; border:3px solid #0f4c4f;
+  border-radius:8px; text-align:center; box-shadow:0 8px 0 rgba(15,76,79,.2); }
+.coop-intro h2, .coop-result h2 { margin:2px 0 8px; font-size:clamp(22px, 5.4vmin, 36px); color:#0f4c4f; letter-spacing:-.5px; }
+.coop-kicker { margin:0; font-size:12px; font-weight:800; color:#b05a4a; letter-spacing:1px; }
+.coop-lineup, .coop-photo { list-style:none; margin:8px 0; padding:0; display:flex; justify-content:center; align-items:flex-end; gap:6px; }
+.coop-lineup li, .coop-photo li { display:flex; flex-direction:column; align-items:center; min-width:0; flex:0 1 92px; }
+.coop-lineup canvas, .coop-photo canvas { width:100%; max-width:84px; height:auto; aspect-ratio:144 / 224; }
+.coop-lineup span, .coop-photo span { font-size:12px; font-weight:700; max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.coop-lineup li.me span { background:#0f4c4f; color:#fbe6df; padding:1px 6px; border-radius:4px; }
+.coop-lineup em { font-style:normal; font-size:11px; font-weight:800; color:#fffaf2; background:#e46a5f; padding:0 6px; border-radius:4px; margin-bottom:2px; }
+.coop-lineup li { animation:coop-drop .5s cubic-bezier(.2,1.4,.4,1) both; }
+.coop-lineup li:nth-child(2) { animation-delay:.08s; } .coop-lineup li:nth-child(3) { animation-delay:.16s; }
+.coop-lineup li:nth-child(4) { animation-delay:.24s; } .coop-lineup li:nth-child(5) { animation-delay:.32s; }
+.coop-count { margin:4px 0; font-size:clamp(20px, 5vmin, 30px); font-weight:800; color:#e46a5f; }
+.coop-howto { margin:6px 0 0; font-size:14px; }
+.coop-howto b { background:#0f4c4f; color:#fbe6df; padding:1px 6px; border-radius:4px; }
+.coop-result.win h2 { color:#0f4c4f; font-size:clamp(34px, 9vmin, 56px); }
+.coop-result.lose h2 { color:#b05a4a; font-size:clamp(30px, 8vmin, 50px); }
+.coop-time { margin:2px 0; font-size:clamp(18px, 4.4vmin, 26px); font-weight:800; font-variant-numeric:tabular-nums; }
+.coop-time b { margin-left:6px; padding:2px 8px; background:#f2c14e; border:2px solid #2a1410; border-radius:4px; font-size:.8em; }
+.coop-best { margin:4px 0 0; font-size:13px; color:#55605a; }
+.coop-result.win .coop-photo li { animation:coop-hop .7s calc(var(--d, 0s) + .2s) ease-in-out 3 both; }
+.coop-result.lose .coop-photo li { opacity:.8; }
+
+/* 휴대폰 세로: 글자와 버튼을 줄인다 */
+@media (max-width:520px) {
+  .coop-title { font-size:14px; }
+  .coop-timer { font-size:20px; }
+  .coop-hint { font-size:12px; top:calc(48px + env(safe-area-inset-top)); }
+  .coop-cheers button { min-width:64px; min-height:48px; padding:4px 6px; }
+  .coop-controls { font-size:12px; }
+  .coop-lineup li, .coop-photo li { flex-basis:64px; }
+}
+/* 휴대폰 가로: 위아래 막대를 얇게 */
+@media (max-height:460px) {
+  .coop-hud { padding-block:4px; }
+  .coop-bar { padding-block:4px; }
+  .coop-cheers button { min-height:40px; flex-direction:row; gap:4px; }
+  .coop-intro, .coop-result { top:50%; max-height:calc(100% - 90px); padding:10px 12px; }
+  .coop-lineup canvas, .coop-photo canvas { max-width:56px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .coop-banner.show, .coop-lineup li, .coop-result.win .coop-photo li, .coop-timer.low { animation:none; }
+}
+@keyframes coop-pop { from { transform:translate(-50%,-50%) scale(.4); opacity:0; } to { transform:translate(-50%,-50%) scale(1); opacity:1; } }
+@keyframes coop-fade { to { opacity:0; transform:translate(-50%,-70%); } }
+@keyframes coop-press { 50% { transform:scale(.9); } }
+@keyframes coop-drop { from { transform:translateY(-40px); opacity:0; } to { transform:none; opacity:1; } }
+@keyframes coop-hop { 0%,100% { transform:none; } 40% { transform:translateY(-18px); } 60% { transform:translateY(-18px) scaleY(1.04); } }
+@keyframes coop-blink { 50% { opacity:.55; } }

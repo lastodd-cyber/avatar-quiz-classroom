@@ -1,0 +1,54 @@
+#champion-finale { position:fixed; inset:0; z-index:2000; overflow:hidden; background:#0b3335; color:#fbe6df; isolation:isolate; }
+.champion-particles { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; z-index:4; }
+.champion-beams { position:absolute; inset:-40%; opacity:.18; background:#a9cfcb; clip-path:polygon(50% 50%,0 0,20% 0,50% 50%,80% 0,100% 0,50% 50%,100% 35%,100% 55%,50% 50%,100% 85%,100% 100%,50% 50%,60% 100%,40% 100%,50% 50%,0 100%,0 80%,50% 50%,0 45%,0 25%); animation:champion-spin 24s linear infinite; }
+.champion-orbit { position:absolute; width:70vmin; height:70vmin; left:50%; top:50%; margin:-35vmin; border:2px solid #f2d78c66; border-radius:50%; box-shadow:0 0 0 8vmin #f2d78c0a,0 0 0 16vmin #f2d78c08; }
+.champion-intro { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; text-align:center; }
+.champion-intro p { font-size:clamp(16px,2vw,28px); letter-spacing:.2em; }
+.champion-intro strong { font-size:clamp(30px,6vw,90px); }
+.champion-intro b { font-size:clamp(100px,20vmin,220px); color:#f2d78c; animation:champion-count 1s ease-out infinite; }
+.champion-result { position:absolute; inset:3vh 5vw 75px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; visibility:hidden; }
+.champion-eyebrow { font-size:clamp(12px,1.8vw,22px); letter-spacing:.22em; margin:0 0 10px; }
+.champion-title { font-size:clamp(42px,8vw,112px); color:#f2d78c; line-height:1.05; margin:0 0 12px; letter-spacing:-.045em; text-shadow:4px 5px 0 #2a1410; }
+.champion-cast { display:flex; align-items:flex-end; justify-content:center; width:100%; height:clamp(130px,36vh,370px); flex-shrink:1; min-height:80px; margin-top:26px; }
+/* 시상대(2026-10-20): 2등 왼쪽·1등 가운데(가장 높음)·3등 오른쪽. 캐릭터 아래에 금·은·동 받침과 이름·점수 */
+.champion-cast { height:clamp(200px,52vh,520px); gap:clamp(4px,1.5vw,18px); }
+.champion-stand { position:relative; flex:0 1 calc(86vw / var(--champion-count,1)); max-width:260px; min-width:0; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%; }
+.champion-figure { position:relative; width:100%; height:58%; display:flex; align-items:flex-end; justify-content:center; }
+/* 그림 크기 상자(2026-10-20): 칸이 좁아도 그림 비율대로 줄어 발은 받침 위에, 왕관은 머리 위에 붙는다.
+   아래 2.5%는 그림 발밑의 빈 줄만큼 내려 신발이 받침에 닿게 한다. */
+.champion-art { position:relative; flex:none; height:100%; max-width:100%; aspect-ratio:var(--art-w,144)/var(--art-h,224); transform:translateY(2.5%); }
+@supports (height:1cqh) { .champion-figure { container-type:size; } .champion-art { height:min(100cqh, 100cqw * var(--art-h,224) / var(--art-w,144)); } }
+.champion-art>canvas { display:block; width:100%; height:100%; object-fit:contain; object-position:50% 100%; filter:drop-shadow(0 10px 0 #0003); }
+.champion-crown { position:absolute; z-index:1; width:50%; height:21%; top:-12%; left:25%; }
+.champion-block { width:100%; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; gap:2px; padding-top:6px; border:3px solid #2a1410; border-bottom:0; color:#2a1410; box-shadow:inset 0 -10px 0 #0002; }
+.champion-block b { font-size:clamp(26px,5vmin,52px); line-height:1; }
+.champion-block strong { font-size:clamp(13px,2.4vmin,24px); max-width:96%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.champion-block small { font-size:clamp(12px,2vmin,19px); font-weight:700; }
+.rank-1 .champion-block { height:40%; background:#f2d78c; }
+.rank-2 .champion-block { height:31%; background:#d9dde2; }
+.rank-3 .champion-block { height:25%; background:#e3b48c; }
+.rank-2 .champion-figure, .rank-3 .champion-figure { height:54%; }
+.champion-names { font-size:clamp(26px,4.2vw,64px); font-weight:900; line-height:1.2; max-height:20vh; overflow:auto; overflow-wrap:anywhere; max-width:100%; margin-top:12px; padding:4px 12px; }
+.champion-score { font-size:clamp(18px,2.5vw,34px); color:#f2d78c; margin:8px 0; }
+.champion-cheer { font-size:clamp(12px,1.5vw,19px); margin:4px 0; }
+.champion-close { position:absolute; z-index:6; bottom:max(18px,env(safe-area-inset-bottom)); left:50%; transform:translateX(-50%); min-height:44px; padding:12px 24px; background:#fbe6df; color:#0f4c4f; border:2px solid #f2d78c; white-space:nowrap; }
+/* 선생님 화면에만: 시상식 뒤 협동 게임방 열기(돌아가기 버튼 위) */
+.champion-coop { position:absolute; z-index:6; bottom:calc(max(18px,env(safe-area-inset-bottom)) + 56px); left:50%; transform:translateX(-50%);
+  min-height:44px; padding:12px 24px; background:#f2c14e; color:#2a1410; border:2px solid #2a1410; font-weight:800; white-space:nowrap; }
+.is-revealed .champion-intro { display:none; }
+.is-revealed .champion-result { visibility:visible; }
+.is-revealed .champion-title { animation:champion-title .7s cubic-bezier(.2,.9,.25,1.2) both; }
+.is-revealed .champion-stand { animation:champion-land .9s var(--land-delay,.35s) cubic-bezier(.2,.8,.3,1) both; }
+.is-revealed .champion-crown { animation:champion-crown .7s 1.95s cubic-bezier(.2,.8,.3,1) both; }
+.is-revealed .champion-names { animation:champion-name .6s .85s both; }
+.is-revealed .champion-orbit { animation:champion-ring 1s .6s ease-out both; }
+.is-still *, .is-still .champion-beams { animation:none!important; }
+@keyframes champion-spin { to { transform:rotate(360deg); } }
+@keyframes champion-count { from { transform:scale(1.4); opacity:.2; } 30%,to { transform:scale(1); opacity:1; } }
+@keyframes champion-title { from { transform:scale(3) rotate(-12deg); opacity:0; } 70% { transform:scale(.94) rotate(2deg); } to { transform:none; opacity:1; } }
+@keyframes champion-land { from { transform:translateY(-85vh) rotate(-15deg); } 65% { transform:translateY(12px) scale(1.2,.8); } 82% { transform:translateY(-25px) scale(.95,1.05); } to { transform:none; } }
+@keyframes champion-crown { from { transform:translateY(-40vh) rotate(35deg) scale(2); opacity:0; } 70% { transform:translateY(6px) rotate(-8deg); opacity:1; } to { transform:none; opacity:1; } }
+@keyframes champion-name { from { transform:translateX(-80vw) skew(-15deg); opacity:0; } to { transform:none; opacity:1; } }
+@keyframes champion-ring { from { transform:scale(.1); opacity:1; } to { transform:scale(1.6); opacity:.3; } }
+@media (max-height:500px) { .champion-result { inset:8px 5vw 60px; } .champion-eyebrow,.champion-cheer { display:none; } .champion-title { font-size:36px; margin:0; } .champion-cast { height:30vh; margin-top:12px; } .champion-cast { height:42vh; } .champion-names { font-size:24px; margin:0; } .champion-score { font-size:18px; margin:2px; } }
+@media (prefers-reduced-motion:reduce) { #champion-finale * { animation:none!important; } }

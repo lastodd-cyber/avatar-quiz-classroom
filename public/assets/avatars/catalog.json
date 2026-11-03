@@ -1,0 +1,2365 @@
+{
+  "version": 2,
+  "spec": {
+    "width": 48,
+    "height": 64,
+    "frames": 4,
+    "directions": [
+      "down",
+      "left",
+      "right",
+      "up"
+    ],
+    "feet": [
+      24,
+      60
+    ],
+    "neck": [
+      24,
+      34
+    ],
+    "version": 2
+  },
+  "layers": [
+    "hairBack",
+    "legs",
+    "shoes",
+    "body",
+    "bagBack",
+    "face",
+    "features",
+    "hairFront",
+    "eyewear",
+    "hat",
+    "bagFront"
+  ],
+  "defaultColors": {
+    "skin": "#efbc99",
+    "hair": "#44302c",
+    "shirt": "#6f9374",
+    "pants": "#465571",
+    "shoeColor": "#f0e8d7",
+    "accent": "#e2bc67",
+    "style": 0,
+    "face": 1,
+    "eye": 1,
+    "spacing": 1,
+    "glasses": false,
+    "mouth": 1,
+    "brow": 1,
+    "faceShape": 0,
+    "eyeStyle": 0,
+    "mouthStyle": 0,
+    "top": 4,
+    "bottom": 1,
+    "shoes": 0,
+    "eyewear": 0,
+    "hat": 0,
+    "bag": 0
+  },
+  "categories": {
+    "hair": [
+      {
+        "id": 0,
+        "name": "옆으로 넘긴 짧은 머리",
+        "length": 0,
+        "fringe": 0.25,
+        "texture": 0,
+        "kind": "sweep"
+      },
+      {
+        "id": 1,
+        "name": "둥근 단발",
+        "length": 0.55,
+        "fringe": 0.7,
+        "texture": 0,
+        "kind": "bob"
+      },
+      {
+        "id": 2,
+        "name": "긴 생머리",
+        "length": 1,
+        "fringe": 0.25,
+        "texture": 0,
+        "kind": "long"
+      },
+      {
+        "id": 3,
+        "name": "일자 앞머리",
+        "length": 0.12,
+        "fringe": 1,
+        "texture": 0,
+        "kind": "bowl"
+      },
+      {
+        "id": 4,
+        "name": "가르마 머리",
+        "length": 0.15,
+        "fringe": 0.2,
+        "texture": 0,
+        "kind": "part"
+      },
+      {
+        "id": 5,
+        "name": "짧은 곱슬",
+        "length": 0.18,
+        "fringe": 0.55,
+        "texture": 1,
+        "kind": "curl"
+      },
+      {
+        "id": 6,
+        "name": "아주 짧은 머리",
+        "length": 0,
+        "fringe": 0,
+        "texture": 0,
+        "kind": "crop"
+      },
+      {
+        "id": 7,
+        "name": "올린 머리",
+        "length": 0.1,
+        "fringe": 0,
+        "texture": 0.2,
+        "kind": "quiff"
+      },
+      {
+        "id": 8,
+        "name": "부드러운 투블록",
+        "length": 0.12,
+        "fringe": 0.6,
+        "texture": 0,
+        "kind": "undercut"
+      },
+      {
+        "id": 9,
+        "name": "뾰족한 짧은 머리",
+        "length": 0.08,
+        "fringe": 0.15,
+        "texture": 0.8,
+        "kind": "spike"
+      },
+      {
+        "id": 10,
+        "name": "귀밑 단발",
+        "length": 0.38,
+        "fringe": 0.85,
+        "texture": 0,
+        "kind": "shortbob"
+      },
+      {
+        "id": 11,
+        "name": "가르마 단발",
+        "length": 0.6,
+        "fringe": 0.15,
+        "texture": 0,
+        "kind": "partbob"
+      },
+      {
+        "id": 12,
+        "name": "웨이브 단발",
+        "length": 0.65,
+        "fringe": 0.4,
+        "texture": 0.8,
+        "kind": "wavebob"
+      },
+      {
+        "id": 13,
+        "name": "어깨 길이 머리",
+        "length": 0.8,
+        "fringe": 0.4,
+        "texture": 0,
+        "kind": "shoulder"
+      },
+      {
+        "id": 14,
+        "name": "긴 앞머리 생머리",
+        "length": 1,
+        "fringe": 0.95,
+        "texture": 0,
+        "kind": "longbang"
+      },
+      {
+        "id": 15,
+        "name": "긴 웨이브",
+        "length": 1,
+        "fringe": 0.35,
+        "texture": 0.9,
+        "kind": "wave"
+      },
+      {
+        "id": 16,
+        "name": "높은 포니테일",
+        "length": 0.75,
+        "fringe": 0.6,
+        "texture": 0,
+        "kind": "pony"
+      },
+      {
+        "id": 17,
+        "name": "낮은 포니테일",
+        "length": 0.7,
+        "fringe": 0.2,
+        "texture": 0,
+        "kind": "lowpony"
+      },
+      {
+        "id": 18,
+        "name": "양갈래 머리",
+        "length": 0.8,
+        "fringe": 0.8,
+        "texture": 0,
+        "kind": "twintail"
+      },
+      {
+        "id": 19,
+        "name": "올림머리",
+        "length": 0.2,
+        "fringe": 0.1,
+        "texture": 0,
+        "kind": "bun"
+      },
+      {
+        "id": 20,
+        "name": "양쪽 묶은 머리",
+        "length": 0.25,
+        "fringe": 0.85,
+        "texture": 0,
+        "kind": "doublebun"
+      },
+      {
+        "id": 21,
+        "name": "땋은 머리",
+        "length": 1,
+        "fringe": 0.3,
+        "texture": 0.4,
+        "kind": "braid"
+      },
+      {
+        "id": 22,
+        "name": "풍성한 곱슬",
+        "length": 0.6,
+        "fringe": 0.6,
+        "texture": 1,
+        "kind": "fluffy"
+      },
+      {
+        "id": 23,
+        "name": "머리카락 없음",
+        "length": 0,
+        "fringe": 0,
+        "texture": 0,
+        "kind": "bald"
+      }
+    ],
+    "faceShape": [
+      {
+        "id": 0,
+        "name": "둥근 얼굴"
+      },
+      {
+        "id": 1,
+        "name": "계란형 얼굴"
+      },
+      {
+        "id": 2,
+        "name": "통통한 얼굴"
+      },
+      {
+        "id": 3,
+        "name": "갸름한 얼굴"
+      },
+      {
+        "id": 4,
+        "name": "각진 얼굴"
+      },
+      {
+        "id": 5,
+        "name": "작은 얼굴"
+      }
+    ],
+    "eyeStyle": [
+      {
+        "id": 0,
+        "name": "또렷한 눈"
+      },
+      {
+        "id": 1,
+        "name": "동그란 눈"
+      },
+      {
+        "id": 2,
+        "name": "차분한 눈"
+      },
+      {
+        "id": 3,
+        "name": "웃는 눈"
+      },
+      {
+        "id": 4,
+        "name": "가느다란 눈"
+      },
+      {
+        "id": 5,
+        "name": "반짝이는 눈"
+      }
+    ],
+    "mouthStyle": [
+      {
+        "id": 0,
+        "name": "작은 미소"
+      },
+      {
+        "id": 1,
+        "name": "활짝 웃음"
+      },
+      {
+        "id": 2,
+        "name": "차분한 입"
+      },
+      {
+        "id": 3,
+        "name": "밝은 미소"
+      }
+    ],
+    "top": [
+      {
+        "id": 0,
+        "name": "기본 티셔츠"
+      },
+      {
+        "id": 1,
+        "name": "줄무늬 티셔츠"
+      },
+      {
+        "id": 2,
+        "name": "배색 티셔츠"
+      },
+      {
+        "id": 3,
+        "name": "폴로 셔츠"
+      },
+      {
+        "id": 4,
+        "name": "후드티"
+      },
+      {
+        "id": 5,
+        "name": "맨투맨"
+      },
+      {
+        "id": 6,
+        "name": "주머니 셔츠"
+      },
+      {
+        "id": 7,
+        "name": "체크 셔츠"
+      },
+      {
+        "id": 8,
+        "name": "니트 조끼"
+      },
+      {
+        "id": 9,
+        "name": "카디건"
+      },
+      {
+        "id": 10,
+        "name": "데님 재킷"
+      },
+      {
+        "id": 11,
+        "name": "블레이저"
+      },
+      {
+        "id": 12,
+        "name": "넥타이 셔츠"
+      },
+      {
+        "id": 13,
+        "name": "리본 블라우스"
+      },
+      {
+        "id": 14,
+        "name": "멜빵바지 상의"
+      },
+      {
+        "id": 15,
+        "name": "긴 소매 니트"
+      }
+    ],
+    "bottom": [
+      {
+        "id": 0,
+        "name": "일자 바지"
+      },
+      {
+        "id": 1,
+        "name": "청바지"
+      },
+      {
+        "id": 2,
+        "name": "반바지"
+      },
+      {
+        "id": 3,
+        "name": "주름 치마"
+      },
+      {
+        "id": 4,
+        "name": "긴 치마"
+      },
+      {
+        "id": 5,
+        "name": "넓은 바지"
+      },
+      {
+        "id": 6,
+        "name": "트레이닝 바지"
+      },
+      {
+        "id": 7,
+        "name": "멜빵바지 하의"
+      }
+    ],
+    "shoes": [
+      {
+        "id": 0,
+        "name": "운동화"
+      },
+      {
+        "id": 1,
+        "name": "단화"
+      },
+      {
+        "id": 2,
+        "name": "로퍼"
+      },
+      {
+        "id": 3,
+        "name": "하이탑"
+      },
+      {
+        "id": 4,
+        "name": "부츠"
+      },
+      {
+        "id": 5,
+        "name": "샌들"
+      }
+    ],
+    "eyewear": [
+      {
+        "id": 0,
+        "name": "안경 없음"
+      },
+      {
+        "id": 1,
+        "name": "둥근 안경"
+      },
+      {
+        "id": 2,
+        "name": "네모 안경"
+      },
+      {
+        "id": 3,
+        "name": "가는 테 안경"
+      },
+      {
+        "id": 4,
+        "name": "둥근 큰 안경"
+      },
+      {
+        "id": 5,
+        "name": "선글라스"
+      }
+    ],
+    "hat": [
+      {
+        "id": 0,
+        "name": "머리 장식 없음"
+      },
+      {
+        "id": 1,
+        "name": "볼캡"
+      },
+      {
+        "id": 2,
+        "name": "베레모"
+      },
+      {
+        "id": 3,
+        "name": "비니"
+      },
+      {
+        "id": 4,
+        "name": "버킷햇"
+      },
+      {
+        "id": 5,
+        "name": "리본"
+      },
+      {
+        "id": 6,
+        "name": "머리핀"
+      },
+      {
+        "id": 7,
+        "name": "꽃핀"
+      },
+      {
+        "id": 8,
+        "name": "헤드폰"
+      },
+      {
+        "id": 9,
+        "name": "새싹 머리띠"
+      }
+    ],
+    "bag": [
+      {
+        "id": 0,
+        "name": "가방 없음"
+      },
+      {
+        "id": 1,
+        "name": "배낭"
+      },
+      {
+        "id": 2,
+        "name": "크로스백"
+      },
+      {
+        "id": 3,
+        "name": "에코백"
+      },
+      {
+        "id": 4,
+        "name": "작은 책가방"
+      },
+      {
+        "id": 5,
+        "name": "목도리"
+      }
+    ]
+  },
+  "parts": [
+    {
+      "category": "hair",
+      "id": 0,
+      "name": "옆으로 넘긴 짧은 머리",
+      "layer": "hairBack",
+      "file": "parts/hair_00_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 0,
+      "name": "옆으로 넘긴 짧은 머리",
+      "layer": "hairFront",
+      "file": "parts/hair_00_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 1,
+      "name": "둥근 단발",
+      "layer": "hairBack",
+      "file": "parts/hair_01_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 1,
+      "name": "둥근 단발",
+      "layer": "hairFront",
+      "file": "parts/hair_01_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 2,
+      "name": "긴 생머리",
+      "layer": "hairBack",
+      "file": "parts/hair_02_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 2,
+      "name": "긴 생머리",
+      "layer": "hairFront",
+      "file": "parts/hair_02_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 3,
+      "name": "일자 앞머리",
+      "layer": "hairBack",
+      "file": "parts/hair_03_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 3,
+      "name": "일자 앞머리",
+      "layer": "hairFront",
+      "file": "parts/hair_03_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 4,
+      "name": "가르마 머리",
+      "layer": "hairBack",
+      "file": "parts/hair_04_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 4,
+      "name": "가르마 머리",
+      "layer": "hairFront",
+      "file": "parts/hair_04_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 5,
+      "name": "짧은 곱슬",
+      "layer": "hairBack",
+      "file": "parts/hair_05_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 5,
+      "name": "짧은 곱슬",
+      "layer": "hairFront",
+      "file": "parts/hair_05_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 6,
+      "name": "아주 짧은 머리",
+      "layer": "hairBack",
+      "file": "parts/hair_06_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 6,
+      "name": "아주 짧은 머리",
+      "layer": "hairFront",
+      "file": "parts/hair_06_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 7,
+      "name": "올린 머리",
+      "layer": "hairBack",
+      "file": "parts/hair_07_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 7,
+      "name": "올린 머리",
+      "layer": "hairFront",
+      "file": "parts/hair_07_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 8,
+      "name": "부드러운 투블록",
+      "layer": "hairBack",
+      "file": "parts/hair_08_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 8,
+      "name": "부드러운 투블록",
+      "layer": "hairFront",
+      "file": "parts/hair_08_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 9,
+      "name": "뾰족한 짧은 머리",
+      "layer": "hairBack",
+      "file": "parts/hair_09_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 9,
+      "name": "뾰족한 짧은 머리",
+      "layer": "hairFront",
+      "file": "parts/hair_09_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 10,
+      "name": "귀밑 단발",
+      "layer": "hairBack",
+      "file": "parts/hair_10_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 10,
+      "name": "귀밑 단발",
+      "layer": "hairFront",
+      "file": "parts/hair_10_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 11,
+      "name": "가르마 단발",
+      "layer": "hairBack",
+      "file": "parts/hair_11_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 11,
+      "name": "가르마 단발",
+      "layer": "hairFront",
+      "file": "parts/hair_11_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 12,
+      "name": "웨이브 단발",
+      "layer": "hairBack",
+      "file": "parts/hair_12_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 12,
+      "name": "웨이브 단발",
+      "layer": "hairFront",
+      "file": "parts/hair_12_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 13,
+      "name": "어깨 길이 머리",
+      "layer": "hairBack",
+      "file": "parts/hair_13_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 13,
+      "name": "어깨 길이 머리",
+      "layer": "hairFront",
+      "file": "parts/hair_13_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 14,
+      "name": "긴 앞머리 생머리",
+      "layer": "hairBack",
+      "file": "parts/hair_14_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 14,
+      "name": "긴 앞머리 생머리",
+      "layer": "hairFront",
+      "file": "parts/hair_14_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 15,
+      "name": "긴 웨이브",
+      "layer": "hairBack",
+      "file": "parts/hair_15_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 15,
+      "name": "긴 웨이브",
+      "layer": "hairFront",
+      "file": "parts/hair_15_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 16,
+      "name": "높은 포니테일",
+      "layer": "hairBack",
+      "file": "parts/hair_16_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 16,
+      "name": "높은 포니테일",
+      "layer": "hairFront",
+      "file": "parts/hair_16_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 17,
+      "name": "낮은 포니테일",
+      "layer": "hairBack",
+      "file": "parts/hair_17_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 17,
+      "name": "낮은 포니테일",
+      "layer": "hairFront",
+      "file": "parts/hair_17_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 18,
+      "name": "양갈래 머리",
+      "layer": "hairBack",
+      "file": "parts/hair_18_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 18,
+      "name": "양갈래 머리",
+      "layer": "hairFront",
+      "file": "parts/hair_18_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 19,
+      "name": "올림머리",
+      "layer": "hairBack",
+      "file": "parts/hair_19_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 19,
+      "name": "올림머리",
+      "layer": "hairFront",
+      "file": "parts/hair_19_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 20,
+      "name": "양쪽 묶은 머리",
+      "layer": "hairBack",
+      "file": "parts/hair_20_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 20,
+      "name": "양쪽 묶은 머리",
+      "layer": "hairFront",
+      "file": "parts/hair_20_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 21,
+      "name": "땋은 머리",
+      "layer": "hairBack",
+      "file": "parts/hair_21_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 21,
+      "name": "땋은 머리",
+      "layer": "hairFront",
+      "file": "parts/hair_21_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 22,
+      "name": "풍성한 곱슬",
+      "layer": "hairBack",
+      "file": "parts/hair_22_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 22,
+      "name": "풍성한 곱슬",
+      "layer": "hairFront",
+      "file": "parts/hair_22_hairFront.png"
+    },
+    {
+      "category": "hair",
+      "id": 23,
+      "name": "머리카락 없음",
+      "layer": "hairBack",
+      "file": "parts/hair_23_hairBack.png"
+    },
+    {
+      "category": "hair",
+      "id": 23,
+      "name": "머리카락 없음",
+      "layer": "hairFront",
+      "file": "parts/hair_23_hairFront.png"
+    },
+    {
+      "category": "faceShape",
+      "id": 0,
+      "name": "둥근 얼굴",
+      "layer": "face",
+      "file": "parts/faceShape_00_face.png"
+    },
+    {
+      "category": "faceShape",
+      "id": 1,
+      "name": "계란형 얼굴",
+      "layer": "face",
+      "file": "parts/faceShape_01_face.png"
+    },
+    {
+      "category": "faceShape",
+      "id": 2,
+      "name": "통통한 얼굴",
+      "layer": "face",
+      "file": "parts/faceShape_02_face.png"
+    },
+    {
+      "category": "faceShape",
+      "id": 3,
+      "name": "갸름한 얼굴",
+      "layer": "face",
+      "file": "parts/faceShape_03_face.png"
+    },
+    {
+      "category": "faceShape",
+      "id": 4,
+      "name": "각진 얼굴",
+      "layer": "face",
+      "file": "parts/faceShape_04_face.png"
+    },
+    {
+      "category": "faceShape",
+      "id": 5,
+      "name": "작은 얼굴",
+      "layer": "face",
+      "file": "parts/faceShape_05_face.png"
+    },
+    {
+      "category": "eyeStyle",
+      "id": 0,
+      "name": "또렷한 눈",
+      "layer": "features",
+      "file": "parts/eyeStyle_00_features.png"
+    },
+    {
+      "category": "eyeStyle",
+      "id": 1,
+      "name": "동그란 눈",
+      "layer": "features",
+      "file": "parts/eyeStyle_01_features.png"
+    },
+    {
+      "category": "eyeStyle",
+      "id": 2,
+      "name": "차분한 눈",
+      "layer": "features",
+      "file": "parts/eyeStyle_02_features.png"
+    },
+    {
+      "category": "eyeStyle",
+      "id": 3,
+      "name": "웃는 눈",
+      "layer": "features",
+      "file": "parts/eyeStyle_03_features.png"
+    },
+    {
+      "category": "eyeStyle",
+      "id": 4,
+      "name": "가느다란 눈",
+      "layer": "features",
+      "file": "parts/eyeStyle_04_features.png"
+    },
+    {
+      "category": "eyeStyle",
+      "id": 5,
+      "name": "반짝이는 눈",
+      "layer": "features",
+      "file": "parts/eyeStyle_05_features.png"
+    },
+    {
+      "category": "mouthStyle",
+      "id": 0,
+      "name": "작은 미소",
+      "layer": "features",
+      "file": "parts/mouthStyle_00_features.png"
+    },
+    {
+      "category": "mouthStyle",
+      "id": 1,
+      "name": "활짝 웃음",
+      "layer": "features",
+      "file": "parts/mouthStyle_01_features.png"
+    },
+    {
+      "category": "mouthStyle",
+      "id": 2,
+      "name": "차분한 입",
+      "layer": "features",
+      "file": "parts/mouthStyle_02_features.png"
+    },
+    {
+      "category": "mouthStyle",
+      "id": 3,
+      "name": "밝은 미소",
+      "layer": "features",
+      "file": "parts/mouthStyle_03_features.png"
+    },
+    {
+      "category": "top",
+      "id": 0,
+      "name": "기본 티셔츠",
+      "layer": "body",
+      "file": "parts/top_00_body.png"
+    },
+    {
+      "category": "top",
+      "id": 1,
+      "name": "줄무늬 티셔츠",
+      "layer": "body",
+      "file": "parts/top_01_body.png"
+    },
+    {
+      "category": "top",
+      "id": 2,
+      "name": "배색 티셔츠",
+      "layer": "body",
+      "file": "parts/top_02_body.png"
+    },
+    {
+      "category": "top",
+      "id": 3,
+      "name": "폴로 셔츠",
+      "layer": "body",
+      "file": "parts/top_03_body.png"
+    },
+    {
+      "category": "top",
+      "id": 4,
+      "name": "후드티",
+      "layer": "body",
+      "file": "parts/top_04_body.png"
+    },
+    {
+      "category": "top",
+      "id": 5,
+      "name": "맨투맨",
+      "layer": "body",
+      "file": "parts/top_05_body.png"
+    },
+    {
+      "category": "top",
+      "id": 6,
+      "name": "주머니 셔츠",
+      "layer": "body",
+      "file": "parts/top_06_body.png"
+    },
+    {
+      "category": "top",
+      "id": 7,
+      "name": "체크 셔츠",
+      "layer": "body",
+      "file": "parts/top_07_body.png"
+    },
+    {
+      "category": "top",
+      "id": 8,
+      "name": "니트 조끼",
+      "layer": "body",
+      "file": "parts/top_08_body.png"
+    },
+    {
+      "category": "top",
+      "id": 9,
+      "name": "카디건",
+      "layer": "body",
+      "file": "parts/top_09_body.png"
+    },
+    {
+      "category": "top",
+      "id": 10,
+      "name": "데님 재킷",
+      "layer": "body",
+      "file": "parts/top_10_body.png"
+    },
+    {
+      "category": "top",
+      "id": 11,
+      "name": "블레이저",
+      "layer": "body",
+      "file": "parts/top_11_body.png"
+    },
+    {
+      "category": "top",
+      "id": 12,
+      "name": "넥타이 셔츠",
+      "layer": "body",
+      "file": "parts/top_12_body.png"
+    },
+    {
+      "category": "top",
+      "id": 13,
+      "name": "리본 블라우스",
+      "layer": "body",
+      "file": "parts/top_13_body.png"
+    },
+    {
+      "category": "top",
+      "id": 14,
+      "name": "멜빵바지 상의",
+      "layer": "body",
+      "file": "parts/top_14_body.png"
+    },
+    {
+      "category": "top",
+      "id": 15,
+      "name": "긴 소매 니트",
+      "layer": "body",
+      "file": "parts/top_15_body.png"
+    },
+    {
+      "category": "bottom",
+      "id": 0,
+      "name": "일자 바지",
+      "layer": "legs",
+      "file": "parts/bottom_00_legs.png"
+    },
+    {
+      "category": "bottom",
+      "id": 1,
+      "name": "청바지",
+      "layer": "legs",
+      "file": "parts/bottom_01_legs.png"
+    },
+    {
+      "category": "bottom",
+      "id": 2,
+      "name": "반바지",
+      "layer": "legs",
+      "file": "parts/bottom_02_legs.png"
+    },
+    {
+      "category": "bottom",
+      "id": 3,
+      "name": "주름 치마",
+      "layer": "legs",
+      "file": "parts/bottom_03_legs.png"
+    },
+    {
+      "category": "bottom",
+      "id": 4,
+      "name": "긴 치마",
+      "layer": "legs",
+      "file": "parts/bottom_04_legs.png"
+    },
+    {
+      "category": "bottom",
+      "id": 5,
+      "name": "넓은 바지",
+      "layer": "legs",
+      "file": "parts/bottom_05_legs.png"
+    },
+    {
+      "category": "bottom",
+      "id": 6,
+      "name": "트레이닝 바지",
+      "layer": "legs",
+      "file": "parts/bottom_06_legs.png"
+    },
+    {
+      "category": "bottom",
+      "id": 7,
+      "name": "멜빵바지 하의",
+      "layer": "legs",
+      "file": "parts/bottom_07_legs.png"
+    },
+    {
+      "category": "shoes",
+      "id": 0,
+      "name": "운동화",
+      "layer": "shoes",
+      "file": "parts/shoes_00_shoes.png"
+    },
+    {
+      "category": "shoes",
+      "id": 1,
+      "name": "단화",
+      "layer": "shoes",
+      "file": "parts/shoes_01_shoes.png"
+    },
+    {
+      "category": "shoes",
+      "id": 2,
+      "name": "로퍼",
+      "layer": "shoes",
+      "file": "parts/shoes_02_shoes.png"
+    },
+    {
+      "category": "shoes",
+      "id": 3,
+      "name": "하이탑",
+      "layer": "shoes",
+      "file": "parts/shoes_03_shoes.png"
+    },
+    {
+      "category": "shoes",
+      "id": 4,
+      "name": "부츠",
+      "layer": "shoes",
+      "file": "parts/shoes_04_shoes.png"
+    },
+    {
+      "category": "shoes",
+      "id": 5,
+      "name": "샌들",
+      "layer": "shoes",
+      "file": "parts/shoes_05_shoes.png"
+    },
+    {
+      "category": "eyewear",
+      "id": 0,
+      "name": "안경 없음",
+      "layer": "eyewear",
+      "file": "parts/eyewear_00_eyewear.png"
+    },
+    {
+      "category": "eyewear",
+      "id": 1,
+      "name": "둥근 안경",
+      "layer": "eyewear",
+      "file": "parts/eyewear_01_eyewear.png"
+    },
+    {
+      "category": "eyewear",
+      "id": 2,
+      "name": "네모 안경",
+      "layer": "eyewear",
+      "file": "parts/eyewear_02_eyewear.png"
+    },
+    {
+      "category": "eyewear",
+      "id": 3,
+      "name": "가는 테 안경",
+      "layer": "eyewear",
+      "file": "parts/eyewear_03_eyewear.png"
+    },
+    {
+      "category": "eyewear",
+      "id": 4,
+      "name": "둥근 큰 안경",
+      "layer": "eyewear",
+      "file": "parts/eyewear_04_eyewear.png"
+    },
+    {
+      "category": "eyewear",
+      "id": 5,
+      "name": "선글라스",
+      "layer": "eyewear",
+      "file": "parts/eyewear_05_eyewear.png"
+    },
+    {
+      "category": "hat",
+      "id": 0,
+      "name": "머리 장식 없음",
+      "layer": "hat",
+      "file": "parts/hat_00_hat.png"
+    },
+    {
+      "category": "hat",
+      "id": 1,
+      "name": "볼캡",
+      "layer": "hat",
+      "file": "parts/hat_01_hat.png"
+    },
+    {
+      "category": "hat",
+      "id": 2,
+      "name": "베레모",
+      "layer": "hat",
+      "file": "parts/hat_02_hat.png"
+    },
+    {
+      "category": "hat",
+      "id": 3,
+      "name": "비니",
+      "layer": "hat",
+      "file": "parts/hat_03_hat.png"
+    },
+    {
+      "category": "hat",
+      "id": 4,
+      "name": "버킷햇",
+      "layer": "hat",
+      "file": "parts/hat_04_hat.png"
+    },
+    {
+      "category": "hat",
+      "id": 5,
+      "name": "리본",
+      "layer": "hat",
+      "file": "parts/hat_05_hat.png"
+    },
+    {
+      "category": "hat",
+      "id": 6,
+      "name": "머리핀",
+      "layer": "hat",
+      "file": "parts/hat_06_hat.png"
+    },
+    {
+      "category": "hat",
+      "id": 7,
+      "name": "꽃핀",
+      "layer": "hat",
+      "file": "parts/hat_07_hat.png"
+    },
+    {
+      "category": "hat",
+      "id": 8,
+      "name": "헤드폰",
+      "layer": "hat",
+      "file": "parts/hat_08_hat.png"
+    },
+    {
+      "category": "hat",
+      "id": 9,
+      "name": "새싹 머리띠",
+      "layer": "hat",
+      "file": "parts/hat_09_hat.png"
+    },
+    {
+      "category": "bag",
+      "id": 0,
+      "name": "가방 없음",
+      "layer": "bagBack",
+      "file": "parts/bag_00_bagBack.png"
+    },
+    {
+      "category": "bag",
+      "id": 0,
+      "name": "가방 없음",
+      "layer": "bagFront",
+      "file": "parts/bag_00_bagFront.png"
+    },
+    {
+      "category": "bag",
+      "id": 1,
+      "name": "배낭",
+      "layer": "bagBack",
+      "file": "parts/bag_01_bagBack.png"
+    },
+    {
+      "category": "bag",
+      "id": 1,
+      "name": "배낭",
+      "layer": "bagFront",
+      "file": "parts/bag_01_bagFront.png"
+    },
+    {
+      "category": "bag",
+      "id": 2,
+      "name": "크로스백",
+      "layer": "bagBack",
+      "file": "parts/bag_02_bagBack.png"
+    },
+    {
+      "category": "bag",
+      "id": 2,
+      "name": "크로스백",
+      "layer": "bagFront",
+      "file": "parts/bag_02_bagFront.png"
+    },
+    {
+      "category": "bag",
+      "id": 3,
+      "name": "에코백",
+      "layer": "bagBack",
+      "file": "parts/bag_03_bagBack.png"
+    },
+    {
+      "category": "bag",
+      "id": 3,
+      "name": "에코백",
+      "layer": "bagFront",
+      "file": "parts/bag_03_bagFront.png"
+    },
+    {
+      "category": "bag",
+      "id": 4,
+      "name": "작은 책가방",
+      "layer": "bagBack",
+      "file": "parts/bag_04_bagBack.png"
+    },
+    {
+      "category": "bag",
+      "id": 4,
+      "name": "작은 책가방",
+      "layer": "bagFront",
+      "file": "parts/bag_04_bagFront.png"
+    },
+    {
+      "category": "bag",
+      "id": 5,
+      "name": "목도리",
+      "layer": "bagBack",
+      "file": "parts/bag_05_bagBack.png"
+    },
+    {
+      "category": "bag",
+      "id": 5,
+      "name": "목도리",
+      "layer": "bagFront",
+      "file": "parts/bag_05_bagFront.png"
+    }
+  ],
+  "samples": [
+    {
+      "skin": "#f6d6bd",
+      "hair": "#292630",
+      "shirt": "#bd6b65",
+      "pants": "#465571",
+      "shoeColor": "#f0e8d7",
+      "accent": "#6f9374",
+      "style": 0,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 0,
+      "eyeStyle": 0,
+      "mouthStyle": 0,
+      "top": 0,
+      "bottom": 0,
+      "shoes": 0,
+      "eyewear": 1,
+      "hat": 1,
+      "bag": 1
+    },
+    {
+      "skin": "#efbc99",
+      "hair": "#44302c",
+      "shirt": "#d99b83",
+      "pants": "#6a839b",
+      "shoeColor": "#f0e8d7",
+      "accent": "#46776f",
+      "style": 1,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 1,
+      "eyeStyle": 1,
+      "mouthStyle": 1,
+      "top": 1,
+      "bottom": 1,
+      "shoes": 1,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#dfa77c",
+      "hair": "#644335",
+      "shirt": "#e2bc67",
+      "pants": "#343d4a",
+      "shoeColor": "#f0e8d7",
+      "accent": "#6094a5",
+      "style": 2,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 2,
+      "eyeStyle": 2,
+      "mouthStyle": 2,
+      "top": 2,
+      "bottom": 2,
+      "shoes": 2,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#c58a60",
+      "hair": "#916344",
+      "shirt": "#efdbac",
+      "pants": "#736353",
+      "shoeColor": "#f0e8d7",
+      "accent": "#778bbb",
+      "style": 3,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 3,
+      "eyeStyle": 0,
+      "mouthStyle": 3,
+      "top": 3,
+      "bottom": 3,
+      "shoes": 3,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 4
+    },
+    {
+      "skin": "#a76a49",
+      "hair": "#bc945f",
+      "shirt": "#6f9374",
+      "pants": "#a99b7c",
+      "shoeColor": "#f0e8d7",
+      "accent": "#9b7baa",
+      "style": 4,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 4,
+      "eyeStyle": 1,
+      "mouthStyle": 0,
+      "top": 4,
+      "bottom": 4,
+      "shoes": 4,
+      "eyewear": 5,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#825038",
+      "hair": "#dec58e",
+      "shirt": "#46776f",
+      "pants": "#d5c5a9",
+      "shoeColor": "#f0e8d7",
+      "accent": "#cc95a7",
+      "style": 5,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 5,
+      "eyeStyle": 2,
+      "mouthStyle": 1,
+      "top": 5,
+      "bottom": 5,
+      "shoes": 5,
+      "eyewear": 0,
+      "hat": 6,
+      "bag": 0
+    },
+    {
+      "skin": "#603d30",
+      "hair": "#eee0c5",
+      "shirt": "#6094a5",
+      "pants": "#705d79",
+      "shoeColor": "#f0e8d7",
+      "accent": "#f0e8d7",
+      "style": 6,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 0,
+      "eyeStyle": 0,
+      "mouthStyle": 2,
+      "top": 6,
+      "bottom": 6,
+      "shoes": 0,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 2
+    },
+    {
+      "skin": "#f3c6af",
+      "hair": "#89848b",
+      "shirt": "#778bbb",
+      "pants": "#54716a",
+      "shoeColor": "#f0e8d7",
+      "accent": "#393f50",
+      "style": 7,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 1,
+      "eyeStyle": 1,
+      "mouthStyle": 3,
+      "top": 7,
+      "bottom": 7,
+      "shoes": 1,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#f6d6bd",
+      "hair": "#744954",
+      "shirt": "#9b7baa",
+      "pants": "#465571",
+      "shoeColor": "#f0e8d7",
+      "accent": "#785c49",
+      "style": 8,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 2,
+      "eyeStyle": 2,
+      "mouthStyle": 0,
+      "top": 8,
+      "bottom": 0,
+      "shoes": 2,
+      "eyewear": 4,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#efbc99",
+      "hair": "#986b85",
+      "shirt": "#cc95a7",
+      "pants": "#6a839b",
+      "shoeColor": "#f0e8d7",
+      "accent": "#66717d",
+      "style": 9,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 3,
+      "eyeStyle": 0,
+      "mouthStyle": 1,
+      "top": 9,
+      "bottom": 1,
+      "shoes": 3,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 5
+    },
+    {
+      "skin": "#dfa77c",
+      "hair": "#52716e",
+      "shirt": "#f0e8d7",
+      "pants": "#343d4a",
+      "shoeColor": "#f0e8d7",
+      "accent": "#a9bb8d",
+      "style": 10,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 4,
+      "eyeStyle": 1,
+      "mouthStyle": 2,
+      "top": 10,
+      "bottom": 2,
+      "shoes": 4,
+      "eyewear": 0,
+      "hat": 2,
+      "bag": 0
+    },
+    {
+      "skin": "#c58a60",
+      "hair": "#51617b",
+      "shirt": "#393f50",
+      "pants": "#736353",
+      "shoeColor": "#f0e8d7",
+      "accent": "#a57355",
+      "style": 11,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 5,
+      "eyeStyle": 2,
+      "mouthStyle": 3,
+      "top": 11,
+      "bottom": 3,
+      "shoes": 5,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#a76a49",
+      "hair": "#292630",
+      "shirt": "#785c49",
+      "pants": "#a99b7c",
+      "shoeColor": "#f0e8d7",
+      "accent": "#bd6b65",
+      "style": 12,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 0,
+      "eyeStyle": 0,
+      "mouthStyle": 0,
+      "top": 12,
+      "bottom": 4,
+      "shoes": 0,
+      "eyewear": 3,
+      "hat": 0,
+      "bag": 3
+    },
+    {
+      "skin": "#825038",
+      "hair": "#44302c",
+      "shirt": "#66717d",
+      "pants": "#d5c5a9",
+      "shoeColor": "#f0e8d7",
+      "accent": "#d99b83",
+      "style": 13,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 1,
+      "eyeStyle": 1,
+      "mouthStyle": 1,
+      "top": 13,
+      "bottom": 5,
+      "shoes": 1,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#603d30",
+      "hair": "#644335",
+      "shirt": "#a9bb8d",
+      "pants": "#705d79",
+      "shoeColor": "#f0e8d7",
+      "accent": "#e2bc67",
+      "style": 14,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 2,
+      "eyeStyle": 2,
+      "mouthStyle": 2,
+      "top": 14,
+      "bottom": 6,
+      "shoes": 2,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#f3c6af",
+      "hair": "#916344",
+      "shirt": "#a57355",
+      "pants": "#54716a",
+      "shoeColor": "#f0e8d7",
+      "accent": "#efdbac",
+      "style": 15,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 3,
+      "eyeStyle": 0,
+      "mouthStyle": 3,
+      "top": 15,
+      "bottom": 7,
+      "shoes": 3,
+      "eyewear": 0,
+      "hat": 7,
+      "bag": 1
+    },
+    {
+      "skin": "#f6d6bd",
+      "hair": "#bc945f",
+      "shirt": "#bd6b65",
+      "pants": "#465571",
+      "shoeColor": "#f0e8d7",
+      "accent": "#6f9374",
+      "style": 16,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 4,
+      "eyeStyle": 1,
+      "mouthStyle": 0,
+      "top": 0,
+      "bottom": 0,
+      "shoes": 4,
+      "eyewear": 2,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#efbc99",
+      "hair": "#dec58e",
+      "shirt": "#d99b83",
+      "pants": "#6a839b",
+      "shoeColor": "#f0e8d7",
+      "accent": "#46776f",
+      "style": 17,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 5,
+      "eyeStyle": 2,
+      "mouthStyle": 1,
+      "top": 1,
+      "bottom": 1,
+      "shoes": 5,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#dfa77c",
+      "hair": "#eee0c5",
+      "shirt": "#e2bc67",
+      "pants": "#343d4a",
+      "shoeColor": "#f0e8d7",
+      "accent": "#6094a5",
+      "style": 18,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 0,
+      "eyeStyle": 0,
+      "mouthStyle": 2,
+      "top": 2,
+      "bottom": 2,
+      "shoes": 0,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 4
+    },
+    {
+      "skin": "#c58a60",
+      "hair": "#89848b",
+      "shirt": "#efdbac",
+      "pants": "#736353",
+      "shoeColor": "#f0e8d7",
+      "accent": "#778bbb",
+      "style": 19,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 1,
+      "eyeStyle": 1,
+      "mouthStyle": 3,
+      "top": 3,
+      "bottom": 3,
+      "shoes": 1,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#a76a49",
+      "hair": "#744954",
+      "shirt": "#6f9374",
+      "pants": "#a99b7c",
+      "shoeColor": "#f0e8d7",
+      "accent": "#9b7baa",
+      "style": 20,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 2,
+      "eyeStyle": 2,
+      "mouthStyle": 0,
+      "top": 4,
+      "bottom": 4,
+      "shoes": 2,
+      "eyewear": 1,
+      "hat": 3,
+      "bag": 0
+    },
+    {
+      "skin": "#825038",
+      "hair": "#986b85",
+      "shirt": "#46776f",
+      "pants": "#d5c5a9",
+      "shoeColor": "#f0e8d7",
+      "accent": "#cc95a7",
+      "style": 21,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 3,
+      "eyeStyle": 0,
+      "mouthStyle": 1,
+      "top": 5,
+      "bottom": 5,
+      "shoes": 3,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 2
+    },
+    {
+      "skin": "#603d30",
+      "hair": "#52716e",
+      "shirt": "#6094a5",
+      "pants": "#705d79",
+      "shoeColor": "#f0e8d7",
+      "accent": "#f0e8d7",
+      "style": 22,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 4,
+      "eyeStyle": 1,
+      "mouthStyle": 2,
+      "top": 6,
+      "bottom": 6,
+      "shoes": 4,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#f3c6af",
+      "hair": "#51617b",
+      "shirt": "#778bbb",
+      "pants": "#54716a",
+      "shoeColor": "#f0e8d7",
+      "accent": "#393f50",
+      "style": 23,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 5,
+      "eyeStyle": 2,
+      "mouthStyle": 3,
+      "top": 7,
+      "bottom": 7,
+      "shoes": 5,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#f6d6bd",
+      "hair": "#292630",
+      "shirt": "#9b7baa",
+      "pants": "#465571",
+      "shoeColor": "#f0e8d7",
+      "accent": "#785c49",
+      "style": 0,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 0,
+      "eyeStyle": 0,
+      "mouthStyle": 0,
+      "top": 8,
+      "bottom": 0,
+      "shoes": 0,
+      "eyewear": 5,
+      "hat": 0,
+      "bag": 5
+    },
+    {
+      "skin": "#efbc99",
+      "hair": "#44302c",
+      "shirt": "#cc95a7",
+      "pants": "#6a839b",
+      "shoeColor": "#f0e8d7",
+      "accent": "#66717d",
+      "style": 1,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 1,
+      "eyeStyle": 1,
+      "mouthStyle": 1,
+      "top": 9,
+      "bottom": 1,
+      "shoes": 1,
+      "eyewear": 0,
+      "hat": 8,
+      "bag": 0
+    },
+    {
+      "skin": "#dfa77c",
+      "hair": "#644335",
+      "shirt": "#f0e8d7",
+      "pants": "#343d4a",
+      "shoeColor": "#f0e8d7",
+      "accent": "#a9bb8d",
+      "style": 2,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 2,
+      "eyeStyle": 2,
+      "mouthStyle": 2,
+      "top": 10,
+      "bottom": 2,
+      "shoes": 2,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#c58a60",
+      "hair": "#916344",
+      "shirt": "#393f50",
+      "pants": "#736353",
+      "shoeColor": "#f0e8d7",
+      "accent": "#a57355",
+      "style": 3,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 3,
+      "eyeStyle": 0,
+      "mouthStyle": 3,
+      "top": 11,
+      "bottom": 3,
+      "shoes": 3,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 3
+    },
+    {
+      "skin": "#a76a49",
+      "hair": "#bc945f",
+      "shirt": "#785c49",
+      "pants": "#a99b7c",
+      "shoeColor": "#f0e8d7",
+      "accent": "#bd6b65",
+      "style": 4,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 4,
+      "eyeStyle": 1,
+      "mouthStyle": 0,
+      "top": 12,
+      "bottom": 4,
+      "shoes": 4,
+      "eyewear": 4,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#825038",
+      "hair": "#dec58e",
+      "shirt": "#66717d",
+      "pants": "#d5c5a9",
+      "shoeColor": "#f0e8d7",
+      "accent": "#d99b83",
+      "style": 5,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 5,
+      "eyeStyle": 2,
+      "mouthStyle": 1,
+      "top": 13,
+      "bottom": 5,
+      "shoes": 5,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#603d30",
+      "hair": "#eee0c5",
+      "shirt": "#a9bb8d",
+      "pants": "#705d79",
+      "shoeColor": "#f0e8d7",
+      "accent": "#e2bc67",
+      "style": 6,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 0,
+      "eyeStyle": 0,
+      "mouthStyle": 2,
+      "top": 14,
+      "bottom": 6,
+      "shoes": 0,
+      "eyewear": 0,
+      "hat": 4,
+      "bag": 1
+    },
+    {
+      "skin": "#f3c6af",
+      "hair": "#89848b",
+      "shirt": "#a57355",
+      "pants": "#54716a",
+      "shoeColor": "#f0e8d7",
+      "accent": "#efdbac",
+      "style": 7,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 1,
+      "eyeStyle": 1,
+      "mouthStyle": 3,
+      "top": 15,
+      "bottom": 7,
+      "shoes": 1,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#f6d6bd",
+      "hair": "#744954",
+      "shirt": "#bd6b65",
+      "pants": "#465571",
+      "shoeColor": "#f0e8d7",
+      "accent": "#6f9374",
+      "style": 8,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 2,
+      "eyeStyle": 2,
+      "mouthStyle": 0,
+      "top": 0,
+      "bottom": 0,
+      "shoes": 2,
+      "eyewear": 3,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#efbc99",
+      "hair": "#986b85",
+      "shirt": "#d99b83",
+      "pants": "#6a839b",
+      "shoeColor": "#f0e8d7",
+      "accent": "#46776f",
+      "style": 9,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 3,
+      "eyeStyle": 0,
+      "mouthStyle": 1,
+      "top": 1,
+      "bottom": 1,
+      "shoes": 3,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 4
+    },
+    {
+      "skin": "#dfa77c",
+      "hair": "#52716e",
+      "shirt": "#e2bc67",
+      "pants": "#343d4a",
+      "shoeColor": "#f0e8d7",
+      "accent": "#6094a5",
+      "style": 10,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 4,
+      "eyeStyle": 1,
+      "mouthStyle": 2,
+      "top": 2,
+      "bottom": 2,
+      "shoes": 4,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#c58a60",
+      "hair": "#51617b",
+      "shirt": "#efdbac",
+      "pants": "#736353",
+      "shoeColor": "#f0e8d7",
+      "accent": "#778bbb",
+      "style": 11,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 5,
+      "eyeStyle": 2,
+      "mouthStyle": 3,
+      "top": 3,
+      "bottom": 3,
+      "shoes": 5,
+      "eyewear": 0,
+      "hat": 9,
+      "bag": 0
+    },
+    {
+      "skin": "#a76a49",
+      "hair": "#292630",
+      "shirt": "#6f9374",
+      "pants": "#a99b7c",
+      "shoeColor": "#f0e8d7",
+      "accent": "#9b7baa",
+      "style": 12,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 0,
+      "eyeStyle": 0,
+      "mouthStyle": 0,
+      "top": 4,
+      "bottom": 4,
+      "shoes": 0,
+      "eyewear": 2,
+      "hat": 0,
+      "bag": 2
+    },
+    {
+      "skin": "#825038",
+      "hair": "#44302c",
+      "shirt": "#46776f",
+      "pants": "#d5c5a9",
+      "shoeColor": "#f0e8d7",
+      "accent": "#cc95a7",
+      "style": 13,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 1,
+      "eyeStyle": 1,
+      "mouthStyle": 1,
+      "top": 5,
+      "bottom": 5,
+      "shoes": 1,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#603d30",
+      "hair": "#644335",
+      "shirt": "#6094a5",
+      "pants": "#705d79",
+      "shoeColor": "#f0e8d7",
+      "accent": "#f0e8d7",
+      "style": 14,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 2,
+      "eyeStyle": 2,
+      "mouthStyle": 2,
+      "top": 6,
+      "bottom": 6,
+      "shoes": 2,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 0
+    },
+    {
+      "skin": "#f3c6af",
+      "hair": "#916344",
+      "shirt": "#778bbb",
+      "pants": "#54716a",
+      "shoeColor": "#f0e8d7",
+      "accent": "#393f50",
+      "style": 15,
+      "face": 1,
+      "eye": 1,
+      "spacing": 1,
+      "glasses": false,
+      "mouth": 1,
+      "brow": 1,
+      "faceShape": 3,
+      "eyeStyle": 0,
+      "mouthStyle": 3,
+      "top": 7,
+      "bottom": 7,
+      "shoes": 3,
+      "eyewear": 0,
+      "hat": 0,
+      "bag": 5
+    }
+  ],
+  "notes": "Original project pixel artwork. Each sheet is 4 columns × 4 rows: idle/step/recover/step, down/left/right/up. Colors are reference colors; runtime uses src/pixel-avatar.js for recoloring. eyeStyle and mouthStyle are alternative feature previews, not additive layers."
+}

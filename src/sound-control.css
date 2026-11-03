@@ -1,0 +1,28 @@
+.sound-toggle {
+  min-height: 36px;
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border: 1px solid #9eafaa;
+  background: #fffdf6;
+  color: #0f4c4f;
+  font: 600 12px/1.3 Pretendard, system-ui, sans-serif;
+  white-space: nowrap;
+}
+.sound-toggle[aria-pressed="true"] { background: #0f4c4f; color: #fffdf6; }
+.sound-toggle:focus-visible { outline: 3px solid #f2c14e; outline-offset: 3px; }
+.sound-toggle-overlay {
+  position: absolute;
+  top: max(10px, env(safe-area-inset-top));
+  right: max(10px, env(safe-area-inset-right));
+  z-index: 10;
+  pointer-events: auto;
+  min-height: 40px;
+  box-shadow: 0 2px 10px #0002;
+}
+.student-tools .sound-toggle[aria-pressed="true"],
+#board-toolbar .sound-toggle[aria-pressed="true"] { background: #0f4c4f; color: #fffdf6; border-color: #a9cfcb; }
+@media(max-width: 700px) {
+  .student-tools { gap: 4px; }
+  .student-tools button { padding-inline: 9px; }
+  .header-actions .sound-toggle { padding: 7px; font-size: 11px; }
+}

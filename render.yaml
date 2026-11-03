@@ -1,0 +1,19 @@
+# Render 무료 서버에 아바타 퀴즈 교실을 만드는 설정. 공개 저장소 README의 Deploy to Render 버튼이 읽는다.
+# 기존 배포 묶음에는 들어가지 않는다(.gcloudignore 허용 목록 밖).
+services:
+  - type: web
+    name: avatar-classroom
+    runtime: docker
+    plan: free
+    region: singapore
+    healthCheckPath: /api/health
+    envVars:
+      - key: CLOUD_MODE
+        value: "1"
+      # 교사용 키. Render가 만들 때 무작위 값을 넣어 주고, 대시보드 Environment에서 확인한다.
+      - key: TEACHER_KEY
+        generateValue: true
+      - key: MAX_ROOMS
+        value: "3"
+      - key: PHOTO_ASSETS
+        value: "on"

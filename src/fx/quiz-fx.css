@@ -1,0 +1,466 @@
+/* 퀴즈 연출(카운트다운·정답자 등장) — src/fx/quiz-fx.js와 함께 쓴다.
+   색: 딥 틸 #0f4c4f, 살몬 #f4b8a6, 크림 #fbe6df, 다크 브라운 #2a1410, 금색 #f2c14e(1등 표시)
+   글꼴: 큰 글자 QuizDisplay(주아, 연출 글자만 담은 부분 글꼴), 이름·본문 Pretendard */
+
+@font-face {
+  font-family: QuizDisplay;
+  src: url('/fonts/QuizDisplay-Jua.woff') format('woff');
+  font-display: swap;
+}
+
+.qfx-root {
+  --teal: #0f4c4f;
+  --salmon: #f4b8a6;
+  --cream: #fbe6df;
+  --ink: #2a1410;
+  --gold: #f2c14e;
+  --mint: #a9cfcb;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+  overflow: hidden;
+  font-family: Pretendard, system-ui, sans-serif;
+  color: var(--ink);
+  contain: strict;
+}
+
+.qfx-root[hidden] {
+  display: none;
+}
+
+.qfx-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 76, 79, 0.82);
+  opacity: 0;
+}
+
+.qfx-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.qfx-stage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.qfx-layer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: max-content; /* 화면 절반 폭에 묶이지 않게(글자 폭 측정·줄바꿈 방지) */
+  transform: translate(-50%, -50%);
+  will-change: transform, opacity;
+}
+
+/* ---------- 카운트다운 ---------- */
+.qfx-count {
+  font-family: QuizDisplay, Pretendard, sans-serif;
+  font-size: min(46vmin, 360px);
+  line-height: 1;
+  color: var(--cream);
+  -webkit-text-stroke: min(1.6vmin, 12px) var(--ink);
+  paint-order: stroke fill;
+  text-shadow: 0 min(1.4vmin, 10px) 0 var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.qfx-count.is-go {
+  color: var(--gold);
+  font-size: min(30vmin, 240px);
+}
+
+.qfx-ring {
+  width: min(64vmin, 520px);
+  height: min(64vmin, 520px);
+}
+
+.qfx-ring circle {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.qfx-ring .track {
+  stroke: rgba(251, 230, 223, 0.18);
+}
+
+.qfx-ring .bar {
+  stroke: var(--salmon);
+}
+
+.qfx-question {
+  position: absolute;
+  left: 50%;
+  bottom: max(6vh, 28px);
+  transform: translateX(-50%);
+  max-width: min(86vw, 900px);
+  padding: 0.5em 1em;
+  border: 3px solid var(--ink);
+  background: var(--cream);
+  font-size: clamp(16px, 3.4vmin, 30px);
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 6px 0 var(--ink);
+  opacity: 0;
+}
+
+/* ---------- 정답자 ---------- */
+.qfx-avatar {
+  display: block;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 6px 0 rgba(42, 20, 16, 0.35));
+}
+
+.qfx-avatar.is-smooth {
+  image-rendering: auto;
+}
+
+.qfx-head-frame {
+  border-radius: 50%;
+  overflow: hidden;
+  border: min(1.2vmin, 9px) solid var(--ink);
+  background: var(--salmon);
+  box-shadow: 0 min(1.6vmin, 12px) 0 var(--ink);
+}
+
+.qfx-head-frame canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+}
+
+.qfx-stamp {
+  font-family: QuizDisplay, Pretendard, sans-serif;
+  font-size: min(15vmin, 120px);
+  line-height: 1;
+  color: var(--gold);
+  -webkit-text-stroke: min(1.1vmin, 8px) var(--ink);
+  paint-order: stroke fill;
+  text-shadow: 0 min(1vmin, 8px) 0 var(--ink);
+  white-space: nowrap;
+}
+
+.qfx-band {
+  position: absolute;
+  left: -20vw;
+  width: 140vw;
+  height: min(34vmin, 300px);
+  transform-origin: center;
+}
+
+.qfx-band.teal {
+  background: var(--teal);
+  border-block: min(1vmin, 8px) solid var(--ink);
+}
+
+.qfx-band.salmon {
+  background: var(--salmon);
+  border-block: min(1vmin, 8px) solid var(--ink);
+}
+
+.qfx-spot {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 18, 18, 0.9);
+  -webkit-mask: radial-gradient(circle at var(--sx, 50%) var(--sy, 50%), transparent 0 var(--sr, 18vmin), #000 calc(var(--sr, 18vmin) + 1px));
+  mask: radial-gradient(circle at var(--sx, 50%) var(--sy, 50%), transparent 0 var(--sr, 18vmin), #000 calc(var(--sr, 18vmin) + 1px));
+}
+
+.qfx-drumroll {
+  font-family: QuizDisplay, Pretendard, sans-serif;
+  font-size: min(9vmin, 72px);
+  color: var(--cream);
+  -webkit-text-stroke: min(0.7vmin, 5px) var(--ink);
+  paint-order: stroke fill;
+}
+
+/* ---------- 결과 카드 ---------- */
+.qfx-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: min(4vmin, 36px);
+  width: min(92vw, 980px);
+  padding: min(4vmin, 34px) min(5vmin, 44px);
+  background: var(--cream);
+  border: min(1vmin, 7px) solid var(--ink);
+  box-shadow: 0 min(1.8vmin, 14px) 0 var(--ink);
+}
+
+.qfx-card-avatar {
+  position: relative;
+}
+
+.qfx-crown {
+  position: absolute;
+  left: 50%;
+  top: -6%;
+  width: 46%;
+  transform: translate(-50%, -60%) rotate(-8deg);
+}
+
+.qfx-card-body {
+  min-width: 0;
+}
+
+.qfx-kicker {
+  display: inline-block;
+  padding: 0.18em 0.6em;
+  background: var(--teal);
+  color: var(--cream);
+  font-family: QuizDisplay, Pretendard, sans-serif;
+  font-size: clamp(16px, 3.2vmin, 28px);
+}
+
+.qfx-name {
+  margin: 0.15em 0 0.1em;
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.qfx-time {
+  font-family: QuizDisplay, Pretendard, sans-serif;
+  font-size: clamp(26px, 7vmin, 64px);
+  line-height: 1;
+  color: var(--teal);
+}
+
+.qfx-time small {
+  font-size: 0.5em;
+  margin-left: 0.15em;
+}
+
+.qfx-answer {
+  margin-top: 0.6em;
+  font-size: clamp(14px, 2.6vmin, 22px);
+  font-weight: 700;
+}
+
+.qfx-answer b {
+  display: inline-block;
+  padding: 0 0.35em;
+  background: var(--salmon);
+  border: 2px solid var(--ink);
+}
+
+.qfx-meta {
+  margin-top: 0.35em;
+  font-size: clamp(12px, 2.2vmin, 18px);
+  color: #6e3e33;
+}
+
+.qfx-podium {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-top: 0.7em;
+}
+
+.qfx-podium span {
+  padding: 0.2em 0.6em;
+  border: 2px solid var(--ink);
+  background: #fff;
+  font-size: clamp(12px, 2.2vmin, 18px);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.qfx-podium em {
+  font-style: normal;
+  color: var(--teal);
+  margin-right: 0.3em;
+}
+
+@media (max-width: 640px) {
+  .qfx-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .qfx-podium {
+    justify-content: center;
+  }
+}
+
+.qfx-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- 추가: 휴대폰 카운트다운, 내가 1등, 간발의 차 ---------- */
+.qfx-root.is-compact .qfx-count {
+  font-size: min(30vmin, 150px);
+  -webkit-text-stroke-width: min(1.2vmin, 7px);
+}
+
+.qfx-root.is-compact .qfx-count.is-go {
+  font-size: min(20vmin, 110px);
+}
+
+.qfx-kicker.is-me {
+  background: var(--gold);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+}
+
+.qfx-near {
+  display: inline-block;
+  margin-left: 0.5em;
+  padding: 0.1em 0.5em;
+  font-family: QuizDisplay, Pretendard, sans-serif;
+  font-size: clamp(14px, 2.8vmin, 24px);
+  color: var(--ink);
+  background: var(--salmon);
+  border: 3px solid var(--ink);
+  transform: rotate(-6deg);
+}
+
+.qfx-mine {
+  margin-top: 0.7em;
+  padding: 0.3em 0.7em;
+  display: inline-block;
+  background: var(--teal);
+  color: var(--cream);
+  font-weight: 700;
+  font-size: clamp(14px, 2.6vmin, 22px);
+  border: 3px solid var(--ink);
+}
+
+.qfx-mine.is-center {
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+/* ---------- 2026-10-20 추가 연출: 뽑기 캡슐·불꽃놀이·풍선·속보·로켓 낙하산 ---------- */
+.qfx-capsule { position: relative; }
+.qfx-capsule-top,
+.qfx-capsule-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50%;
+  box-sizing: border-box;
+  border: min(1vmin, 7px) solid var(--ink);
+}
+.qfx-capsule-top {
+  top: 0;
+  border-radius: 999px 999px 0 0;
+  border-bottom-width: min(0.5vmin, 4px);
+  background: radial-gradient(circle at 32% 38%, rgba(255, 255, 255, 0.75) 0 9%, transparent 10%), var(--salmon);
+}
+.qfx-capsule-bottom {
+  bottom: 0;
+  border-radius: 0 0 999px 999px;
+  border-top-width: min(0.5vmin, 4px);
+  background: var(--cream);
+}
+.qfx-capsule-mark {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: QuizDisplay, Pretendard, sans-serif;
+  font-size: min(18vmin, 150px);
+  color: var(--gold);
+  -webkit-text-stroke: min(1vmin, 7px) var(--ink);
+  paint-order: stroke fill;
+}
+.qfx-rocket-trail {
+  width: 8px;
+  height: 46px;
+  border-radius: 4px;
+  background: linear-gradient(to top, transparent, var(--gold));
+  box-shadow: 0 0 14px var(--gold);
+}
+.qfx-balloon-group,
+.qfx-chute-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.qfx-balloons { margin-bottom: -6%; overflow: visible; }
+.qfx-chute { margin-bottom: -3%; overflow: visible; }
+.qfx-news { display: flex; flex-direction: column; align-items: stretch; }
+.qfx-news-tag {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.15em 0.6em;
+  background: #c8322a;
+  color: #fff;
+  font-family: QuizDisplay, Pretendard, sans-serif;
+  font-size: min(7vmin, 52px);
+  border: 3px solid var(--ink);
+  border-bottom: 0;
+}
+.qfx-news-tag i {
+  display: inline-block;
+  width: 0.42em;
+  height: 0.42em;
+  border-radius: 50%;
+  background: #fff;
+}
+.qfx-tv {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  background: linear-gradient(#a9cfcb, #eef4f2);
+  border: min(1.2vmin, 9px) solid var(--ink);
+}
+.qfx-tv .qfx-avatar { margin-top: 3%; transform-origin: 50% 18%; }
+.qfx-news-bar {
+  background: var(--teal);
+  color: var(--cream);
+  border: 3px solid var(--ink);
+  border-top: 0;
+  padding: 0.3em 0.6em 0.25em;
+  overflow: hidden;
+}
+.qfx-news-bar b {
+  display: block;
+  font-family: QuizDisplay, Pretendard, sans-serif;
+  font-size: min(7vmin, 54px);
+  line-height: 1.15;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.qfx-news-ticker {
+  margin-top: 0.2em;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: clamp(12px, 2.4vmin, 20px);
+  color: var(--gold);
+}
+.qfx-news-ticker span { display: inline-block; }
+
+/* 이번 문제 점수(결과 카드) */
+.qfx-gain {
+  display: inline-block;
+  margin: 0.2em 0 0.1em;
+  padding: 0.1em 0.6em;
+  background: var(--gold);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  font-family: QuizDisplay, Pretendard, sans-serif;
+  font-size: clamp(16px, 3.2vmin, 30px);
+}

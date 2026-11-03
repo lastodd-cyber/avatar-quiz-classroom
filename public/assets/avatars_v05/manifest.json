@@ -1,0 +1,351 @@
+{
+  "version": "classroom-template-v05b",
+  "template": {
+    "width": 144,
+    "height": 224,
+    "feet": [
+      72,
+      218
+    ],
+    "characterHeight": 196,
+    "displayHeight": 104
+  },
+  "source": {
+    "base": "Art/Character_v05/base_body_ref.png",
+    "hair": [
+      "Art/Character_v05/r2a_hair_sheet_v01.png",
+      "Art/Character_v05/r2b_hair_sheet_v01.png",
+      "Art/Character_v05/r6g_hair_sheet_v01.png"
+    ],
+    "tops": [
+      "Art/Character_v05/r3c_tops_sheet_v01.png",
+      "Art/Character_v05/r3d_tops_sheet_v01.png",
+      "Art/Character_v05/r7h_clothes_sheet_v01.png",
+      "Art/Character_v05/r7h_clothes_sheet_v01.png"
+    ],
+    "bottoms": [
+      "Art/Character_v05/r4e_bottoms_sheet_v01.png",
+      "Art/Character_v05/r7h_clothes_sheet_v01.png"
+    ],
+    "log": "Art/Character_v05/generation_log.json"
+  },
+  "eyes": {
+    "left": {
+      "x": 54.84183043632494,
+      "y": 68.49982547002483
+    },
+    "right": {
+      "x": 89.2981633802817,
+      "y": 68.52322253521126
+    },
+    "mid": {
+      "x": 72.06999690830331,
+      "y": 68.51152400261805
+    },
+    "iod": 34.45634088767202
+  },
+  "hairStyles": [
+    "twoBlock",
+    "crop",
+    "sidePart",
+    "liftUp",
+    "centerPart",
+    "curlyShort",
+    "bob",
+    "bobPart",
+    "shoulder",
+    "longStraight",
+    "longBang",
+    "ponytail",
+    "twinTails",
+    "longWaves"
+  ],
+  "topStyles": [
+    "plainTee",
+    "stripedTee",
+    "polo",
+    "knitVest",
+    "hoodie",
+    "cardigan",
+    "blazer",
+    "paddedJacket",
+    "checkShirt",
+    "raglanTee",
+    "sailorBlouse",
+    "varsityJacket"
+  ],
+  "bottomStyles": [
+    "shorts",
+    "slacks",
+    "joggers",
+    "jeans",
+    "widePants",
+    "pleatedSkirt",
+    "aLineSkirt",
+    "longSkirt"
+  ],
+  "glassesStyles": [
+    "round",
+    "square",
+    "bold",
+    "metal"
+  ],
+  "layers": [
+    {
+      "id": "arms",
+      "recolor": "skin",
+      "file": "/assets/avatars_v05/parts/arms.png"
+    },
+    {
+      "id": "face",
+      "recolor": "skin",
+      "file": "/assets/avatars_v05/parts/face.png"
+    },
+    {
+      "id": "brows",
+      "recolor": "hair",
+      "file": "/assets/avatars_v05/parts/brows.png"
+    },
+    {
+      "id": "bottom:shorts",
+      "recolor": "bottom",
+      "file": "/assets/avatars_v05/parts/bottom/shorts.png"
+    },
+    {
+      "id": "shoes:shorts",
+      "recolor": null,
+      "file": "/assets/avatars_v05/parts/shoes/shorts.png"
+    },
+    {
+      "id": "bottom:slacks",
+      "recolor": "bottom",
+      "file": "/assets/avatars_v05/parts/bottom/slacks.png"
+    },
+    {
+      "id": "shoes:slacks",
+      "recolor": null,
+      "file": "/assets/avatars_v05/parts/shoes/slacks.png"
+    },
+    {
+      "id": "bottom:joggers",
+      "recolor": "bottom",
+      "file": "/assets/avatars_v05/parts/bottom/joggers.png"
+    },
+    {
+      "id": "shoes:joggers",
+      "recolor": null,
+      "file": "/assets/avatars_v05/parts/shoes/joggers.png"
+    },
+    {
+      "id": "bottom:jeans",
+      "recolor": "bottom",
+      "file": "/assets/avatars_v05/parts/bottom/jeans.png"
+    },
+    {
+      "id": "shoes:jeans",
+      "recolor": null,
+      "file": "/assets/avatars_v05/parts/shoes/jeans.png"
+    },
+    {
+      "id": "bottom:widePants",
+      "recolor": "bottom",
+      "file": "/assets/avatars_v05/parts/bottom/widePants.png"
+    },
+    {
+      "id": "shoes:widePants",
+      "recolor": null,
+      "file": "/assets/avatars_v05/parts/shoes/widePants.png"
+    },
+    {
+      "id": "bottom:pleatedSkirt",
+      "recolor": "bottom",
+      "file": "/assets/avatars_v05/parts/bottom/pleatedSkirt.png"
+    },
+    {
+      "id": "shoes:pleatedSkirt",
+      "recolor": null,
+      "file": "/assets/avatars_v05/parts/shoes/pleatedSkirt.png"
+    },
+    {
+      "id": "bottom:aLineSkirt",
+      "recolor": "bottom",
+      "file": "/assets/avatars_v05/parts/bottom/aLineSkirt.png"
+    },
+    {
+      "id": "shoes:aLineSkirt",
+      "recolor": null,
+      "file": "/assets/avatars_v05/parts/shoes/aLineSkirt.png"
+    },
+    {
+      "id": "bottom:longSkirt",
+      "recolor": "bottom",
+      "file": "/assets/avatars_v05/parts/bottom/longSkirt.png"
+    },
+    {
+      "id": "shoes:longSkirt",
+      "recolor": null,
+      "file": "/assets/avatars_v05/parts/shoes/longSkirt.png"
+    },
+    {
+      "id": "top:plainTee",
+      "recolor": "top",
+      "file": "/assets/avatars_v05/parts/top/plainTee.png"
+    },
+    {
+      "id": "top:stripedTee",
+      "recolor": "top",
+      "file": "/assets/avatars_v05/parts/top/stripedTee.png"
+    },
+    {
+      "id": "top:polo",
+      "recolor": "top",
+      "file": "/assets/avatars_v05/parts/top/polo.png"
+    },
+    {
+      "id": "top:knitVest",
+      "recolor": "top",
+      "file": "/assets/avatars_v05/parts/top/knitVest.png"
+    },
+    {
+      "id": "top:hoodie",
+      "recolor": "top",
+      "file": "/assets/avatars_v05/parts/top/hoodie.png"
+    },
+    {
+      "id": "top:cardigan",
+      "recolor": "top",
+      "file": "/assets/avatars_v05/parts/top/cardigan.png"
+    },
+    {
+      "id": "top:blazer",
+      "recolor": "top",
+      "file": "/assets/avatars_v05/parts/top/blazer.png"
+    },
+    {
+      "id": "top:paddedJacket",
+      "recolor": "top",
+      "file": "/assets/avatars_v05/parts/top/paddedJacket.png"
+    },
+    {
+      "id": "top:checkShirt",
+      "recolor": "top",
+      "file": "/assets/avatars_v05/parts/top/checkShirt.png"
+    },
+    {
+      "id": "top:raglanTee",
+      "recolor": "top",
+      "file": "/assets/avatars_v05/parts/top/raglanTee.png"
+    },
+    {
+      "id": "top:sailorBlouse",
+      "recolor": "top",
+      "file": "/assets/avatars_v05/parts/top/sailorBlouse.png"
+    },
+    {
+      "id": "top:varsityJacket",
+      "recolor": "top",
+      "file": "/assets/avatars_v05/parts/top/varsityJacket.png"
+    },
+    {
+      "id": "hair:twoBlock",
+      "recolor": "hair",
+      "file": "/assets/avatars_v05/parts/hair/twoBlock.png"
+    },
+    {
+      "id": "hair:crop",
+      "recolor": "hair",
+      "file": "/assets/avatars_v05/parts/hair/crop.png"
+    },
+    {
+      "id": "hair:sidePart",
+      "recolor": "hair",
+      "file": "/assets/avatars_v05/parts/hair/sidePart.png"
+    },
+    {
+      "id": "hair:liftUp",
+      "recolor": "hair",
+      "file": "/assets/avatars_v05/parts/hair/liftUp.png"
+    },
+    {
+      "id": "hair:centerPart",
+      "recolor": "hair",
+      "file": "/assets/avatars_v05/parts/hair/centerPart.png"
+    },
+    {
+      "id": "hair:curlyShort",
+      "recolor": "hair",
+      "file": "/assets/avatars_v05/parts/hair/curlyShort.png"
+    },
+    {
+      "id": "hair:bob",
+      "recolor": "hair",
+      "file": "/assets/avatars_v05/parts/hair/bob.png"
+    },
+    {
+      "id": "hair:bobPart",
+      "recolor": "hair",
+      "file": "/assets/avatars_v05/parts/hair/bobPart.png"
+    },
+    {
+      "id": "hair:shoulder",
+      "recolor": "hair",
+      "file": "/assets/avatars_v05/parts/hair/shoulder.png"
+    },
+    {
+      "id": "hair:longStraight",
+      "recolor": "hair",
+      "file": "/assets/avatars_v05/parts/hair/longStraight.png"
+    },
+    {
+      "id": "hair:longBang",
+      "recolor": "hair",
+      "file": "/assets/avatars_v05/parts/hair/longBang.png"
+    },
+    {
+      "id": "hair:ponytail",
+      "recolor": "hair",
+      "file": "/assets/avatars_v05/parts/hair/ponytail.png"
+    },
+    {
+      "id": "hair:twinTails",
+      "recolor": "hair",
+      "file": "/assets/avatars_v05/parts/hair/twinTails.png"
+    },
+    {
+      "id": "hair:longWaves",
+      "recolor": "hair",
+      "file": "/assets/avatars_v05/parts/hair/longWaves.png"
+    },
+    {
+      "id": "glasses:round",
+      "recolor": null,
+      "file": "/assets/avatars_v05/parts/glasses/round.png"
+    },
+    {
+      "id": "glasses:square",
+      "recolor": null,
+      "file": "/assets/avatars_v05/parts/glasses/square.png"
+    },
+    {
+      "id": "glasses:bold",
+      "recolor": null,
+      "file": "/assets/avatars_v05/parts/glasses/bold.png"
+    },
+    {
+      "id": "glasses:metal",
+      "recolor": null,
+      "file": "/assets/avatars_v05/parts/glasses/metal.png"
+    }
+  ],
+  "verification": {
+    "baseComboMeanAbsError": 1.27,
+    "note": "기본 부품을 그림 색 그대로 겹친 결과와 축소 원본의 픽셀 평균 차이(0~255). 3 이하면 눈으로 구별되지 않는다."
+  },
+  "rules": [
+    "새 부품은 144×224 투명 PNG, 이 캔버스의 같은 좌표에 그린다(따로 가운데 정렬하거나 크기를 바꾸지 않는다).",
+    "머리 모양은 eyes(두 눈 중심)에 맞춘다. 앞머리는 눈썹을 덮어도 되지만 눈은 덮지 않는다.",
+    "상의 모양은 기본 몸과 같은 키·발 위치로 맞추고, 무지 티가 덮는 몸통을 모두 덮는다. 긴팔은 손까지 넣는다.",
+    "상의는 회색 천으로 그린다. 색 바꾸기는 밝기 기준이고, 흰 안감은 TOP_STYLES의 maxLum 이상이면 그대로 남는다.",
+    "하의는 신발과 한 세트(bottom:<id> 다리·하의·양말, shoes:<id> 신발). 무지 티가 덮는 곳은 비우고 허리를 티 안쪽으로 이어 그린다."
+  ]
+}

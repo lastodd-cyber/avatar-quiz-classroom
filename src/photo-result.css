@@ -1,0 +1,145 @@
+.photo-result-dialog {
+  width: min(620px, calc(100% - 28px));
+  border-radius: 5px;
+}
+.photo-result-dialog #photo-manual { margin-bottom: 14px; }
+.photo-guide, .photo-privacy, #photo-progress, #photo-notes {
+  font-size: 12px;
+  line-height: 1.55;
+  margin: 9px 0;
+}
+.photo-privacy { color: #526b50; }
+.photo-comparison { display: flex; align-items: center; gap: 16px; }
+.photo-original { margin: 0; width: 76px; flex-shrink: 0; text-align: center; }
+.photo-original img { width: 76px; height: 100px; object-fit: contain; }
+.photo-original figcaption { font-size: 11px; margin-top: 4px; }
+#photo-primary { flex: 1; min-width: 0; }
+.photo-candidate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  border: 2px solid var(--line);
+  border-radius: 3px;
+  background: #f8f6eb;
+  color: var(--ink);
+  gap: 4px;
+}
+.photo-candidate[aria-pressed="true"] { border-color: var(--green); }
+.photo-candidate strong { font-size: 13px; }
+.photo-candidate span {
+  width: 100%;
+  font-size: 11px;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.photo-candidate canvas { width: 126px; height: 196px; object-fit: contain; }
+.photo-others { display: flex; gap: 10px; margin-top: 10px; }
+.photo-others > button { flex: 1; min-width: 0; }
+.photo-others canvas { width: 56px; height: 91px; }
+.photo-skin { border: 0; margin: 12px 0; padding: 0; }
+.photo-skin legend { font-size: 12px; margin-bottom: 7px; }
+.v05-swatch {
+  background: var(--swatch);
+  width: 44px;
+  height: 40px;
+  border: 3px solid #fffdf6;
+  box-shadow: 0 0 0 1px #aaa;
+  margin-right: 8px;
+}
+.v05-swatch[aria-pressed="true"] { outline: 2px solid var(--green); outline-offset: 1px; }
+.photo-result-actions { display: flex; gap: 8px; }
+#photo-notes { padding-left: 18px; }
+.photo-result-dialog [hidden] { display: none; }
+@media (max-width: 700px) {
+  .photo-result-dialog { padding: 16px; max-height: calc(100dvh - 24px); }
+  .photo-result-dialog .dialog-title h2 { font-size: 18px; margin-bottom: 4px; }
+  .photo-result-dialog #photo-manual { margin-bottom: 10px; }
+  .photo-candidate canvas { width: 88px; height: 143px; }
+  .photo-others canvas { width: 44px; height: 72px; }
+  .photo-result-actions .button { padding: 11px 10px; font-size: 12px; }
+  .photo-guide, .photo-privacy, #photo-progress, #photo-notes { font-size: 11px; margin: 7px 0; }
+}
+
+/* 넓어진 색표는 휴대폰에서도 미리보기와 저장 버튼을 함께 볼 수 있게 묶는다. */
+.v05-dialog .v05-palette { padding: 6px 0; margin: 0; }
+.v05-dialog .v05-palette legend { font-size: 12px; }
+.v05-palette-options { display: flex; flex-wrap: wrap; gap: 5px; }
+.v05-dialog .v05-palette button {
+  margin: 0;
+  min-height: 36px;
+  padding: 5px 8px;
+  font-size: 11px;
+}
+.v05-dialog .v05-palette .v05-swatch {
+  background: var(--swatch);
+  width: 44px;
+  height: 36px;
+}
+.v05-color-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+  background: var(--swatch);
+  border: 1px solid #9a9a90;
+  vertical-align: middle;
+}
+.v05-choices { display: flex; flex-direction: column; gap: 9px; }
+/* 머리·옷 모양 그림 버튼. 휴대폰에서는 한 줄로 옆으로 넘겨 본다.
+   fieldset은 기본으로 내용 너비보다 좁아지지 않아서(min-inline-size) 옆으로 넘기는 줄이 대화창 전체를 넓힌다 → 0으로. */
+.v05-choices, .v05-palette.v05-shapes { min-width: 0; min-inline-size: 0; }
+/* PC: 머리 14개·상의 12개를 각각 한 줄에 배치한다(색 버튼·저장 버튼까지 한 화면). */
+.avatar-dialog.v05-dialog { width: min(1120px, calc(100% - 28px)); max-height: calc(100vh - 28px); max-height: calc(100dvh - 28px); }
+.v05-shape-options { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 4px; }
+.v05-dialog .v05-palette .v05-shape-options button { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 4px 1px; min-width: 0; }
+.v05-shape-options canvas { width: 44px; height: 44px; max-width: 100%; background: #f8f4e8; border-radius: 50%; }
+.v05-shape-options span { font-size: 10px; line-height: 1.15; word-break: keep-all; text-align: center; }
+.v05-shapes--glassesStyle .v05-shape-options { grid-template-columns: repeat(5, 58px); }
+.v05-shapes--glassesStyle .v05-shape-options canvas { width: 48px; height: 32px; border-radius: 3px; }
+@media (min-width: 1001px) {
+  .v05-shapes--hairStyle .v05-shape-options { grid-template-columns: repeat(14, minmax(0, 1fr)); }
+}
+@media (max-width: 1000px) { .v05-shape-options { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+/* PC: 피부색과 하의 색을 한 줄에 나란히(대화창 높이 줄이기) */
+@media (min-width: 701px) {
+  .v05-dialog .v05-choices { display: grid; grid-template-columns: auto 1fr; column-gap: 24px; }
+  .v05-dialog .v05-choices > * { grid-column: 1 / -1; }
+  .v05-dialog .v05-choices > .v05-palette.v05-palette--skin { grid-column: 1; }
+  .v05-dialog .v05-choices > .v05-palette.v05-palette--bottom { grid-column: 2; }
+}
+@media (max-width: 700px) {
+  .v05-dialog .v05-shape-options { display: flex; overflow-x: auto; gap: 4px; padding-bottom: 4px; scrollbar-width: thin; }
+  .v05-dialog .v05-palette .v05-shape-options button { flex: 0 0 54px; min-height: 0; padding: 2px 1px; gap: 0; }
+  .v05-shape-options canvas { width: 36px; height: 36px; }
+  .v05-shape-options span { font-size: 9.5px; white-space: nowrap; }
+  /* 한 화면에 들어가게: 안내 문장은 숨기고, 머리·상의·하의 색은 한 줄 색 견본(이름 글자는 크기 0으로 남겨 읽어 주기용) */
+  .v05-dialog .v05-intro { display: none; }
+  .v05-dialog .v05-palette.v05-color-palette button {
+    flex: 1 1 0; min-width: 0; min-height: 30px; padding: 3px 0; font-size: 0;
+  }
+  .v05-dialog .v05-palette.v05-color-palette button .v05-color-dot {
+    width: 20px; height: 20px; margin: 0; border-radius: 50%;
+  }
+  .v05-dialog .v05-palette--bottom .v05-palette-options { max-width: 60%; }
+  .v05-dialog { max-height: calc(100dvh - 24px); }
+  .v05-dialog .dialog-title h2 { font-size: 18px; margin-bottom: 4px; }
+  .v05-dialog .muted { margin: 4px 0 8px; }
+  .v05-dialog .v05-editor { gap: 8px; }
+  .v05-dialog .v05-preview { grid-template-columns: 90px 1fr; gap: 5px; }
+  .v05-dialog .v05-preview #edit-avatar { width: 72px; height: 112px; margin: 0; }
+  .v05-dialog .v05-editor > .v05-choices { display: flex; gap: 4px; }
+  .v05-dialog .v05-palette { padding: 4px 0; }
+  .v05-dialog .v05-shapes--glassesStyle .v05-shape-options { overflow-x: visible; padding-bottom: 0; }
+  .v05-dialog .v05-shapes--glassesStyle .v05-shape-options button { flex: 1 1 0; }
+  .v05-shapes--glassesStyle .v05-shape-options canvas { width: 42px; height: 28px; }
+  .v05-dialog .v05-palette-options { gap: 5px; }
+  .v05-dialog .v05-palette button { flex: 0 0 calc((100% - 20px) / 5); padding: 4px 1px; }
+  .v05-dialog .v05-palette .v05-swatch { flex: 0 0 44px; }
+  .v05-dialog .check { margin: 5px 0 0; }
+  .v05-dialog .editor-footer { margin-top: 8px; }
+  .v05-color-dot { width: 9px; height: 9px; margin-right: 2px; }
+}
