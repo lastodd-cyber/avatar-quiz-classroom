@@ -69,6 +69,8 @@ let quizCovered = false;
 let quizCoverFrame = 0;
 let intentional = false;
 let kicked = false;
+// 서버가 교실을 닫는다고 미리 알린 상태. 프록시(Render 등)가 닫힘 코드 4001을 1006으로 바꿔도 닫힌 교실로 처리한다.
+let roomClosed = false;
 const leaveGuard = createLeaveGuard(() => {
   if ($('#confirm-leave')) return;
   const openedDialog = document.querySelector('dialog[open]');
@@ -431,6 +433,7 @@ async function connect(mode, options, code) {
     connectMode = mode;
     intentional = false;
     kicked = false;
+    roomClosed = false;
     myId = null;
     role = mode === 'join' ? 'guest' : 'host';
     snapshot = null;
@@ -524,12 +527,17 @@ function wireRoom(r) {
     kicked = true;
     toast(m);
   });
+  r.onMessage('roomClosed', () => {
+    roomClosed = true;
+    // 닫힌 교실에는 재연결하지 않는다. 연결이 끊기면 SDK가 바로 onLeave를 부른다.
+    r.reconnection.enabled = false;
+  });
   r.onLeave(code => {
     audio.stopAll();
     championFx.close();
     coopView?.close();
     if (intentional) return;
-    const roomGone = code === 4001;
+    const roomGone = code === 4001 || roomClosed;
     if (roomGone || kicked) leaveGuard.disable();
     $("#connection-status").textContent = kicked ? "퇴장됨" : "연결 끊김";
     $("#connection-status").classList.add("offline");

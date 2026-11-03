@@ -616,6 +616,8 @@ export class Classroom extends Room {
       case 'closeRoom':
         this.closing = true;
         this.broadcast('notice', '교실이 닫혔어요. 선생님 화면의 새 QR을 찍어 주세요.');
+        // 프록시가 닫힘 코드를 바꿔도 화면이 재연결하지 않게 먼저 알린다.
+        this.broadcast('roomClosed');
         // 종료된 교실은 자동 복귀 대상이 아니므로 서버 종료 코드를 보낸다.
         void this.disconnect(4001);
         return { ok: true };
@@ -752,6 +754,7 @@ export class Classroom extends Room {
   onBeforeShutdown() {
     this.closing = true;
     this.broadcast('notice', '교실 서버가 다시 시작돼요. 선생님 화면의 새 QR을 찍어 주세요.');
+    this.broadcast('roomClosed');
     return super.onBeforeShutdown();
   }
 }
